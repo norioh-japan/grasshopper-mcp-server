@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageId>GrasshopperMcp.Server</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>MCP Grasshopper Team</Authors>
+    <Company>MCP Grasshopper</Company>
+    <PackageDescription>MCPサーバー実装for Rhinoceros/Grasshopper</PackageDescription>
+    <RepositoryUrl>https://github.com/norioh-japan/grasshopper-mcp-server</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MCP関連 -->
+    <PackageReference Include="ModelContextProtocol.Server" Version="0.1.0" />
+    
+    <!-- ASP.NET Core関連 -->
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+    
+    <!-- Rhino/Grasshopper関連 -->
+    <Reference Include="RhinoCommon">
+      <HintPath>$(RHINO_PATH)\System\RhinoCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <HintPath>$(RHINO_PATH)\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    
+    <!-- その他 -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GrasshopperMCP.Common\GrasshopperMCP.Common.csproj" />
+  </ItemGroup>
+
+</Project>
