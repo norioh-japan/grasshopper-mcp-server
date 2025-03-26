@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <PackageId>GrasshopperMcp.Server</PackageId>
     <Version>1.0.0</Version>
     <Authors>MCP Grasshopper Team</Authors>
     <Company>MCP Grasshopper</Company>
-    <PackageDescription>MCPサーバー実装for Rhinoceros/Grasshopper</PackageDescription>
+    <PackageDescription>MCPサーバー実装for Rhinoceros 8/Grasshopper 2.0</PackageDescription>
     <RepositoryUrl>https://github.com/norioh-japan/grasshopper-mcp-server</RepositoryUrl>
   </PropertyGroup>
 
@@ -16,9 +16,9 @@
     
     <!-- ASP.NET Core関連 -->
     <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
     <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
     
     <!-- Rhino/Grasshopper関連 -->
