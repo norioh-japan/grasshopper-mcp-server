@@ -1,24 +1,24 @@
-# インストールガイド
+# インストールガイド (Rhinoceros 8版)
 
 ## 前提条件
 
-- Rhinoceros 7以上
-- .NET 6.0ランタイム以上
-- Grasshopper（Rhinoに同梱）
+- Rhinoceros 8
+- .NET 7.0ランタイム以上
+- Grasshopper 2.0（Rhino 8に同梱）
 
 ## サーバーのインストール
 
 ### オプション1: .NETツールとしてインストール
 
 ```bash
-dotnet tool install --global GrasshopperMcp.Server
+dotnet tool install --global GrasshopperMcp.Server.Rhino8
 ```
 
 ### オプション2: ソースからビルド
 
 1. リポジトリのクローン
    ```bash
-   git clone https://github.com/norioh-japan/grasshopper-mcp-server.git
+   git clone -b rhino8-net7 https://github.com/norioh-japan/grasshopper-mcp-server.git
    ```
 
 2. サーバープロジェクトに移動
@@ -41,7 +41,7 @@ dotnet tool install --global GrasshopperMcp.Server
 1. GrasshopperMCP.Pluginプロジェクトをビルド
 2. 生成された.ghaファイルをGrasshopperのコンポーネントフォルダにコピー
    - 通常は `%APPDATA%\\Grasshopper\\Libraries` にあります
-3. 既に実行中の場合はRhinocerosを再起動
+3. 既に実行中の場合はRhinoceros 8を再起動
 
 ## 設定
 
@@ -59,7 +59,7 @@ dotnet tool install --global GrasshopperMcp.Server
     },
     "Grasshopper": {
       "AutoStartRhino": false,
-      "RhinoPath": "C:\\Program Files\\Rhino 7\\System\\Rhino.exe",
+      "RhinoPath": "C:\\Program Files\\Rhino 8\\System\\Rhino.exe",
       "MaxDefinitions": 10,
       "MaxExecutionTimeSeconds": 300
     },
@@ -85,25 +85,39 @@ grasshopper-mcp-server --connect --config config.json
 
 ## 動作確認
 
-1. Rhinocerosを開く
-2. Grasshopperを開く
+1. Rhinoceros 8を開く
+2. Grasshopper 2.0を開く
 3. 「Extra」→「Utility」タブから「MCP Server」コンポーネントを探す
 4. キャンバスに配置
 5. Server URLパラメータを設定に合わせて設定
 6. Enableパラメータをtrueに設定して接続を有効化
 7. Status出力で接続状態を確認
 
+## Rhinoceros 7版と8版の併用について
+
+Rhinoceros 7とRhinoceros 8の両方を使用する環境で、適切なバージョンを選択するには：
+
+1. **Rhinoceros 7用**: 
+   - mainブランチのコードを使用し、.NET 6.0環境でビルド
+   - Rhinoceros 7専用のインストールフォルダにインストール
+
+2. **Rhinoceros 8用**:
+   - rhino8-net7ブランチのコードを使用し、.NET 7環境でビルド
+   - Rhinoceros 8専用のインストールフォルダにインストール
+
+それぞれの環境に適したバージョンを使用することで、互換性の問題を回避できます。
+
 ## トラブルシューティング
 
 ### サーバーが起動しない場合
 - ポートが既に使用されていないか確認
-- .NET 6.0以上がインストールされているか確認
+- .NET 7.0以上がインストールされているか確認
 - ファイアウォールの設定を確認
 
 ### プラグインが認識されない場合
 - Grasshopperのコンポーネントフォルダに正しくインストールされているか確認
 - Rhinoを再起動
-- Rhinoのバージョンが7以上であることを確認
+- Rhinoのバージョンが8であることを確認
 
 ### 接続エラーが発生する場合
 - サーバーURLが正しいか確認
