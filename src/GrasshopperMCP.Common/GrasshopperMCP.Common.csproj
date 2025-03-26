@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <PackageId>GrasshopperMcp.Common</PackageId>
     <Version>1.0.0</Version>
     <Authors>MCP Grasshopper Team</Authors>
     <Company>MCP Grasshopper</Company>
-    <PackageDescription>MCPサーバーとGrasshopperプラグイン間の共通ライブラリ</PackageDescription>
+    <PackageDescription>MCPサーバーとGrasshopperプラグイン間の共通ライブラリ（Rhinoceros 8用）</PackageDescription>
     <RepositoryUrl>https://github.com/norioh-japan/grasshopper-mcp-server</RepositoryUrl>
   </PropertyGroup>
 
