@@ -22,10 +22,25 @@ Rhinoceros/Grasshopperとの連携を可能にするModel Context Protocol (MCP)
 [LLM] <--HTTP/WebSocket--> [MCPサーバー] <--API--> [Grasshopperプラグイン] <--> [Rhinoceros]
 ```
 
+## バージョンについて
+
+このリポジトリには2つのバージョンが含まれています：
+
+- **main ブランチ** (.NET 6.0): Rhinoceros 7向けの実装 - 現在のブランチ
+- **rhino8-net7 ブランチ** (.NET 7): Rhinoceros 8向けの実装
+
+環境に合わせて適切なバージョンを選択してください。
+
 ## 必要条件
 
+### Rhinoceros 7向け (mainブランチ)
 - Rhinoceros 7以上
 - .NET 6.0 SDK以上
+- Visual Studio 2022またはC#拡張機能を持つVS Code
+
+### Rhinoceros 8向け (rhino8-net7ブランチ)
+- Rhinoceros 8
+- .NET 7.0 SDK以上
 - Visual Studio 2022またはC#拡張機能を持つVS Code
 
 ## はじめ方
