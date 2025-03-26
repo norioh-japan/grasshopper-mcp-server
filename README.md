@@ -1,41 +1,41 @@
-# Grasshopper MCP Server
+# Grasshopper MCP サーバー
 
-A Model Context Protocol (MCP) server implementation for Rhinoceros/Grasshopper integration, enabling AI models to interact with parametric design tools via natural language.
+Rhinoceros/Grasshopperとの連携を可能にするModel Context Protocol (MCP) サーバー実装です。AIモデルがパラメトリックデザインツールと自然言語で対話することを可能にします。
 
-## Overview
+## 概要
 
-This project implements an MCP server that connects Large Language Models (LLMs) to Rhinoceros and Grasshopper functionality, allowing for:
+このプロジェクトは、大規模言語モデル (LLM) をRhinocerosとGrasshopper機能に接続するMCPサーバーを実装し、以下を可能にします：
 
-- Creating and manipulating parametric designs through natural language
-- Managing Grasshopper definitions and components
-- Executing design solutions and retrieving results
-- Connecting AI systems to powerful computational design tools
+- 自然言語によるパラメトリックデザインの作成と操作
+- Grasshopper定義とコンポーネントの管理
+- 設計ソリューションの実行と結果の取得
+- AIシステムと高度な計算デザインツールの連携
 
-## Architecture
+## アーキテクチャ
 
-The system consists of two main components:
+システムは主に2つのコンポーネントで構成されています：
 
-1. **MCP Server** - A .NET Core application that implements the Model Context Protocol
-2. **Grasshopper Plugin** - A component that runs within Grasshopper and communicates with the MCP server
+1. **MCPサーバー** - Model Context Protocolを実装する.NET Coreアプリケーション
+2. **Grasshopperプラグイン** - Grasshopper内で実行され、MCPサーバーと通信するコンポーネント
 
 ```
-[LLM] <--HTTP/WebSocket--> [MCP Server] <--API--> [Grasshopper Plugin] <--> [Rhinoceros]
+[LLM] <--HTTP/WebSocket--> [MCPサーバー] <--API--> [Grasshopperプラグイン] <--> [Rhinoceros]
 ```
 
-## Requirements
+## 必要条件
 
-- Rhinoceros 7 or higher
-- .NET 6.0 SDK or higher
-- Visual Studio 2022 or VS Code with C# extensions
+- Rhinoceros 7以上
+- .NET 6.0 SDK以上
+- Visual Studio 2022またはC#拡張機能を持つVS Code
 
-## Getting Started
+## はじめ方
 
-See the Installation Guide in the docs directory for detailed setup instructions.
+詳細なセットアップ手順については、docsディレクトリの「インストールガイド」を参照してください。
 
-## Development
+## 開発
 
-See the Developer Guide in the docs directory for information on building and extending the server.
+プロジェクトの構築と拡張に関する情報については、docsディレクトリの「開発者ガイド」を参照してください。
 
-## License
+## ライセンス
 
-This project is licensed under the MIT License.
+このプロジェクトはMITライセンスの下で提供されています。詳細についてはLICENSEファイルを参照してください。
